@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int n, m;
-const int N = 10;
-//2e5;
+const int N = 2e5;
 vector<int> edge[N];
 int dfn[N], low[N], bel[N], idx;
 bool ins[N]; 
