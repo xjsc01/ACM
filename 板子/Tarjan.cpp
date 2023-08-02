@@ -1,3 +1,7 @@
+/*
+在tarjan中得到的顺序是拓扑序的反序！
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 int n, m;
