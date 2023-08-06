@@ -2,7 +2,6 @@
 using namespace std;
 int main()
 {
-
     // system("chcp 65001");
     // setlocale(LC_ALL, "zh-CN");
     char s[100000];
