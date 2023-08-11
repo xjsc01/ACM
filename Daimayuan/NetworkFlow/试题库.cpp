@@ -68,18 +68,40 @@ struct FlowGraph {
 	}
 };
 
-FlowGraph<ll> g;
+FlowGraph<int> g;
+vector< array<int, 3> >vec;
+/*
+原点s   试卷类型     题目     汇点
+vec中存放三个数据：试卷类型，题目号，实际的边号
+*/
 int main()
 {
-    int n, m, s, t;
-    scanf("%d%d%d%d", &n, &m, &s, &t);
-    g.init(s, t, n);
-    for(int i = 1; i <= m; i++){
-        int u, v;
-        ll z;
-        scanf("%d%d%lld", &u, &v, &z);
-        g.addedge(u, v, z);
+    int k, n;
+    scanf("%d%d", &k, &n);
+    int s = k + n + 1;
+    int t = k + n + 2;
+    g.init(s, t, t);
+    int mubiao = 0;
+    for(int i = 1; i <= k; i++){
+        int tmp;
+        scanf("%d", &tmp);
+        mubiao += tmp;
+        g.addedge(s, i, tmp);
     }
-    printf("%lld", g.dinic());
+
+    for(int i = 1; i <= n; i++){
+        int c;
+        scanf("%d", &c);
+        for(int j = 1; j <= c; j++){
+            int x;
+            scanf("%d", x);
+            g.addedge(x, i + k, 1);
+            vec.push_back({x, i + k, g.etot});
+            g.addedge(i, t, 1);
+        }
+    }
+    if(mubiao != g.dinic()){
+        
+    }
     return 0;
 }

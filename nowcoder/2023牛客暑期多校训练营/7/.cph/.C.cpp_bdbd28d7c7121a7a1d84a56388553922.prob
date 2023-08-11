@@ -1,0 +1,1 @@
+{"name":"Local: C","url":"/home/hcb/ACM_github/ACM/nowcoder/2023牛客暑期多校训练营/7/C.cpp","tests":[{"id":1691397764707,"input":"1\n4 1\n2 6 2","output":"0 2 4 6"},{"id":1691397785148,"input":"1\n2 536870913\n536870912","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/hcb/ACM_github/ACM/nowcoder/2023牛客暑期多校训练营/7/C.cpp","group":"local","local":true}
